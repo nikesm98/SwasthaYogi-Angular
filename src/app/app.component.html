@@ -1,4 +1,18 @@
+<div style="text-align:center">
+  <h1>Angular and MongoDB Integration</h1>
+  <form (submit)="addUser(); $event.preventDefault();">
+    <input type="text" [(ngModel)]="name" name="name" placeholder="Name" required>
+    <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required>
+    <button type="submit">Add User</button>
+  </form>
+  <ul>
+    <li *ngFor="let user of users">
+      {{ user.name }} - {{ user.email }}
+    </li>
+  </ul>
+</div>
+
 
 
 <router-outlet />
-<app-auth/>
+<!-- <app-auth/> -->
